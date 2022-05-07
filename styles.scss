@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
+body {
+    --background: #eee;
+    --color: #222;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    font-family: Roboto, sans-serif;
+    color: var(--color);
+    background: var(--background);
+
+
+    header, hr, main {
+        display: flex;
+        width: 32rem;
+        margin-bottom: 2rem;
+    }
+    header {
+        justify-content: space-between;
+        align-items: center;
+    }
+    hr {
+        border: 2px solid var(--color);
+        margin: 1rem 0;
+    }
+    main {
+        flex-direction: column;
+
+        form {
+            background-color: rgba(var(--background), 0.5);	
+            backdrop-filter: blur(5px) saturate(150%); ;
+            border: 1px solid var(--color);
+            display: flex;
+            flex-direction: row;
+            padding: 0.5rem;
+            position: sticky;
+            top: 2rem;
+
+            input{
+                flex-grow: 2;
+                margin-right: 0.5rem;
+            }
+        }
+    }
+}
+
+body.dark{
+    --background: #222;
+    --color: #eee;
+}
+
+.button{
+    border-radius: 0.5rem;
+    background-color: transparent;
+    height: 3rem; //?
+    width: 3rem; //?
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    font-family: 'Roboto', sans-serif;
+    border: 1px solid var(--color);
+    transition: 0.3s all;
+    cursor: pointer;
+    color: var(--color);
+
+    &:hover{
+        background-color: rgba(255,0,0,0.5);
+    }
+}
+
+.input {
+    background-color: transparent;	
+    border: none;
+    outline: none;
+    font-size: 1.5rem;
+    padding: 0 0.5rem;
+    color: var(--color);
+}
+
+.border-radius-4 {
+    border-radius: 0.5rem;
+}
+
+
+#lista {
+    list-style: "none";
+    margin: 0;
+    padding: 0;
+
+    li {
+        border: 1px solid var(--color);
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+
+        input{
+            margin-right: 0.5rem;
+            width: 1.5rem;
+            height: 1.5rem;
+            flex-shrink: 0;
+            border: 1px solid var(--color);
+            border-radius: 0;
+        }
+        p{
+            flex-grow: 1;
+            font-size: 1.5rem;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        input:checked + p{
+            text-decoration: line-through;
+        }
+    
+        button.button{
+            flex-shrink: 0;
+            margin-left: 0.5rem;
+        }
+    }
+
+
+}
+
+@media (max-width: 560px) {
+    body{
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+
+        header, main {
+            width: 100%;
+        }
+    }
+    
+}

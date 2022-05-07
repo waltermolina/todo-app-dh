@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ToDo App - v0</title>
+
+    <!-- Invito a mi archivo de estilos para darle un poco de cosmética a mi documento -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Encabezado de la App -->
+    <header>
+        <h1>ToDo App</h1>
+        <div class="buttons">
+            <button id="fullscreenBtn" class="button">📺</button>
+            <button id="theme" class="button">🌙</button>
+        </div>
+        
+    </header>
+
+    <main>
+        <!-- Sección para crear una nueva tarea -->
+        <form action="" class="border-radius-4">
+
+            <!-- Input para ingresar una tarea -->
+            <input id="nuevaTareaInput" class="input" type="text" name="tarea" placeholder="Ingresa una Tarea">
+
+            <!-- Boton para agregar una tarea -->
+            <button id="agregarBtn" class="button">💾</button>
+
+        </form>
+
+        <hr> <!-- Sólo un separador -->
+
+        <!-- La lista de tareas -->
+        <ol id="lista"></ol>
+
+    </main>
+
+    <!-- Invito a mi archivo JS (el alma de la fiesta) donde tengo el código para manipular el DOM -->
+    <script src="app.js"></script>
+</body>
+
+</html>
